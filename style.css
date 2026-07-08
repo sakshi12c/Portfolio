@@ -264,6 +264,13 @@ ul { list-style: none; }
 .footer-links a:hover { color: rgba(255,255,255,0.9); }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .process-strip { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .process-arrow { display: none; }
+}
+
 @media (max-width: 960px) {
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -271,32 +278,191 @@ ul { list-style: none; }
   .process-strip { grid-template-columns: 1fr 1fr; gap: 16px; }
   .process-arrow { display: none; }
   .cs-grid { grid-template-columns: 1fr; }
+  .scroll-btn { width: 38px; height: 38px; font-size: 1.1rem; }
 }
 
 @media (max-width: 768px) {
+  html { font-size: 15px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .services-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 18px; }
+  .section-work { padding: 80px 0; }
+  .projects-wrapper { gap: 12px; }
+  .projects-grid { gap: 16px; padding: 6px 0; }
+  .project-card { flex: 0 0 min(320px, 85vw); max-width: 320px; padding: 20px; }
+  .project-title { font-size: 1.1rem; margin-bottom: 6px; }
+  .project-desc { font-size: 0.75rem; margin-bottom: 10px; line-height: 1.5; }
+  .project-highlights { margin-bottom: 10px; padding: 10px; gap: 4px; }
+  .highlight-item { font-size: 0.7rem; gap: 6px; }
+  .project-footer { padding-top: 8px; gap: 6px; }
+  .project-stack { font-size: 0.65rem; }
+  .project-demo-btn { padding: 5px 10px; font-size: 0.65rem; }
+  .project-gh-btn { padding: 5px 10px; font-size: 0.65rem; }
   .scroll-btn { width: 36px; height: 36px; font-size: 1rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
   .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
+  .exp-meta { padding-top: 0; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
   .process-strip { grid-template-columns: 1fr; }
+  .section-label { font-size: 0.68rem; }
+  .section-heading { font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 28px; }
+  .hero-heading { font-size: clamp(1.8rem, 4vw, 3rem); }
+  .hero-sub { font-size: 0.95rem; margin-bottom: 24px; }
+  .hero-stats { flex-wrap: wrap; gap: 24px; }
+  .stat { padding-right: 24px; }
+  .stat strong { font-size: 1.4rem; }
+  .testimonial-inner { grid-template-columns: 1fr; gap: 32px; }
+  .testimonial-screenshot { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  html { font-size: 14px; }
+  .container { padding: 0 16px; }
+  .section-work { padding: 60px 0; }
+  .projects-wrapper { gap: 10px; }
+  .project-card { flex: 0 0 min(280px, 90vw); max-width: 280px; padding: 16px; }
+  .project-header { margin-bottom: 12px; }
+  .project-num { font-size: 1.4rem; }
+  .project-title { font-size: 1rem; margin-bottom: 5px; }
+  .project-desc { font-size: 0.7rem; margin-bottom: 8px; line-height: 1.4; }
+  .project-highlights { margin-bottom: 8px; padding: 8px; gap: 3px; }
+  .highlight-item { font-size: 0.65rem; gap: 5px; }
+  .highlight-icon { font-size: 0.75rem; }
+  .project-footer { padding-top: 6px; gap: 4px; flex-direction: column; align-items: stretch; }
+  .project-stack { font-size: 0.6rem; }
+  .project-btn-group { width: 100%; }
+  .project-demo-btn { flex: 1; justify-content: center; padding: 5px 8px; font-size: 0.6rem; }
+  .project-gh-btn { flex: 1; justify-content: center; padding: 5px 8px; font-size: 0.6rem; }
+  .scroll-btn { width: 34px; height: 34px; font-size: 0.9rem; }
+  .nav { padding: 12px 16px; }
+  .nav-logo { font-size: 1.2rem; }
+  .hero { min-height: auto; padding: 100px 0 60px; }
+  .hero-heading { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 16px; }
+  .hero-eyebrow { font-size: 0.75rem; padding: 5px 12px; }
+  .hero-sub { font-size: 0.85rem; margin-bottom: 18px; }
+  .hero-actions { gap: 10px; margin-bottom: 20px; }
+  .btn { padding: 11px 22px; font-size: 0.8rem; }
+  .hero-tags { gap: 6px; margin-bottom: 28px; }
+  .hero-tags span { padding: 4px 10px; font-size: 0.7rem; }
+  .hero-stats { flex-direction: column; gap: 16px; border: none; padding: 0; }
+  .stat { padding: 0; }
+  .stat-divider { display: none; }
+  .stat strong { font-size: 1.2rem; }
+  .stat span { font-size: 0.65rem; }
+  .section-about { padding: 60px 0; }
+  .section-services { padding: 60px 0; }
+  .section-process { padding: 60px 0; }
+  .service-card { padding: 24px; }
+  .service-icon { font-size: 1.5rem; margin-bottom: 12px; }
+  .service-title { font-size: 1rem; }
+  .service-desc { font-size: 0.8rem; }
+  .service-list li { font-size: 0.75rem; }
+  .process-step { padding: 20px 16px; }
+  .process-icon { font-size: 1.4rem; }
+  .process-title { font-size: 0.9rem; }
+  .process-desc { font-size: 0.75rem; }
+  .process-num { font-size: 0.65rem; }
+  .awards-row { gap: 12px; }
+  .award-pill { font-size: 0.75rem; }
+  .award-divider { display: none; }
+  .skill-block { padding: 16px 20px; }
+  .skill-block h4 { font-size: 0.65rem; margin-bottom: 10px; }
+  .skill-pills span { padding: 5px 10px; font-size: 0.7rem; }
+  .contact-form { gap: 14px; }
+  .form-group label { font-size: 0.7rem; }
+  .form-group input, .form-group textarea { padding: 10px 12px; font-size: 0.8rem; }
+  .casestudy-card { padding: 20px 16px; margin-bottom: 20px; }
+  .cs-badge { padding: 5px 12px; font-size: 0.65rem; margin-bottom: 16px; }
+  .cs-grid { gap: 16px; margin-bottom: 16px; }
+  .cs-block { padding: 16px; }
+  .cs-block-label { font-size: 0.7rem; margin-bottom: 8px; }
+  .cs-block p { font-size: 0.8rem; }
+  .cs-step { font-size: 0.75rem; gap: 8px; }
+  .cs-step-num { width: 20px; height: 20px; font-size: 0.6rem; }
+  .cs-result-item { gap: 8px; }
+  .cs-result-icon { font-size: 0.9rem; }
+  .cs-result-item strong { font-size: 0.8rem; }
+  .cs-result-item span { font-size: 0.7rem; }
 }
 
 @media (max-width: 480px) {
-  .hero { padding: 100px 0 60px; }
-  .hero-heading { font-size: 2.6rem; letter-spacing: -0.5px; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
-  .stat strong { font-size: 1.6rem; }
-  .stat-divider { margin-right: 20px; }
-  .stat { padding-right: 20px; }
-  .award-divider { display: none; }
-  .casestudy-card { padding: 24px 20px; }
-  .project-footer { flex-direction: column; align-items: flex-start; }
-  .scroll-btn { width: 32px; height: 32px; font-size: 0.9rem; }
-  .projects-wrapper { gap: 12px; }
+  html { font-size: 13px; }
+  .container { padding: 0 14px; }
+  .section-work { padding: 50px 0; }
+  .hero { padding: 90px 0 50px; }
+  .hero-heading { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 12px; letter-spacing: -0.5px; }
+  .hero-sub { font-size: 0.8rem; margin-bottom: 16px; }
+  .hero-actions { flex-direction: column; gap: 8px; margin-bottom: 16px; }
+  .hero-actions .btn { width: 100%; justify-content: center; padding: 10px 20px; font-size: 0.75rem; }
+  .hero-eyebrow { font-size: 0.65rem; padding: 4px 10px; }
+  .hero-tags { gap: 5px; margin-bottom: 20px; }
+  .hero-tags span { padding: 3px 8px; font-size: 0.65rem; }
+  .hero-scroll-hint { font-size: 0.6rem; bottom: 20px; }
+  .stat strong { font-size: 1.1rem; }
+  .stat span { font-size: 0.6rem; }
+  .projects-wrapper { gap: 8px; }
+  .projects-grid { gap: 12px; padding: 4px 0; }
+  .project-card { flex: 0 0 min(260px, 92vw); max-width: 260px; padding: 14px; }
+  .project-num { font-size: 1.1rem; }
+  .project-tags-inline { gap: 4px; }
+  .tag { padding: 2px 8px; font-size: 0.6rem; }
+  .project-title { font-size: 0.95rem; margin-bottom: 4px; }
+  .project-desc { font-size: 0.65rem; margin-bottom: 6px; }
+  .project-highlights { margin-bottom: 6px; padding: 6px; }
+  .highlight-item { font-size: 0.6rem; gap: 4px; }
+  .project-demo-btn { padding: 4px 8px; font-size: 0.55rem; }
+  .project-gh-btn { padding: 4px 8px; font-size: 0.55rem; }
+  .project-stack { font-size: 0.55rem; }
+  .scroll-btn { width: 32px; height: 32px; font-size: 0.85rem; }
+  .nav { padding: 10px 14px; }
+  .nav-logo { font-size: 1.1rem; }
+  .hamburger span { width: 20px; }
+  .mobile-drawer { padding: 16px 20px 20px; gap: 14px; }
+  .mobile-drawer a { font-size: 0.9rem; }
+  .section-label { font-size: 0.6rem; letter-spacing: 0.15em; margin-bottom: 8px; }
+  .section-heading { font-size: clamp(1.3rem, 3vw, 1.8rem); margin-bottom: 20px; }
+  .service-card { padding: 16px; }
+  .service-icon { font-size: 1.2rem; margin-bottom: 8px; }
+  .service-title { font-size: 0.9rem; }
+  .service-desc { font-size: 0.75rem; margin-bottom: 10px; }
+  .service-list li { font-size: 0.7rem; padding-left: 12px; }
+  .process-step { padding: 16px 12px; }
+  .process-num { font-size: 0.55rem; }
+  .process-icon { font-size: 1.2rem; margin-bottom: 8px; }
+  .process-title { font-size: 0.8rem; }
+  .process-desc { font-size: 0.7rem; }
+  .testimonial-card { padding: 24px 16px; }
+  .testimonial-quote { font-size: 3rem; margin-bottom: 8px; }
+  .testimonial-text { font-size: clamp(0.95rem, 2vw, 1.05rem); margin-bottom: 16px; }
+  .testimonial-avatar { width: 44px; height: 44px; font-size: 0.9rem; }
+  .testimonial-meta strong { font-size: 0.85rem; }
+  .testimonial-meta span { font-size: 0.7rem; }
+  .footer { padding: 20px 0; }
+  .footer-logo { font-size: 1rem; }
+  .footer-copy { font-size: 0.7rem; }
+  .footer-links { gap: 12px; }
+  .footer-links a { font-size: 0.7rem; }
+  .exp-item { padding: 16px 0; }
+  .exp-company { font-size: 1rem; margin-bottom: 2px; }
+  .exp-role { font-size: 0.8rem; }
+  .exp-date { font-size: 0.75rem; }
+  .exp-bullets li { font-size: 0.8rem; }
+  .contact-form { gap: 12px; }
+  .form-group label { font-size: 0.65rem; }
+  .form-group input, .form-group textarea { padding: 8px 10px; font-size: 0.75rem; }
+}
+
+@media (max-width: 360px) {
+  .project-card { flex: 0 0 min(240px, 95vw); max-width: 240px; padding: 12px; }
+  .project-title { font-size: 0.9rem; }
+  .project-desc { font-size: 0.6rem; }
+  .project-demo-btn { font-size: 0.5rem; padding: 3px 6px; }
+  .project-gh-btn { font-size: 0.5rem; padding: 3px 6px; }
+  .scroll-btn { width: 30px; height: 30px; font-size: 0.8rem; }
+  .hero-heading { font-size: clamp(1.2rem, 2.8vw, 1.8rem); }
+  .section-heading { font-size: clamp(1.1rem, 2.5vw, 1.6rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
