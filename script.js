@@ -28,6 +28,24 @@ document.addEventListener('click', (e) => {
 });
 
 
+/* ---- PROJECT SCROLL BUTTONS ---- */
+const scrollLeftBtn  = document.getElementById('scroll-left');
+const scrollRightBtn = document.getElementById('scroll-right');
+const projectsGrid   = document.getElementById('projects-grid');
+
+if (scrollLeftBtn && scrollRightBtn && projectsGrid) {
+  const scrollAmount = 360; // Match card width + gap
+  
+  scrollLeftBtn.addEventListener('click', () => {
+    projectsGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+  
+  scrollRightBtn.addEventListener('click', () => {
+    projectsGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+}
+
+
 /* ---- SCROLL REVEAL ---- */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
