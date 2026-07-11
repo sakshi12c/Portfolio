@@ -512,7 +512,7 @@ section { scroll-margin-top: 84px; }
   .contact-form { gap: 12px; }
   .form-group label { font-size: 0.65rem; }
   .form-group input, .form-group textarea { padding: 8px 10px; font-size: 0.75rem; }
-}
+
 
 @media (max-width: 360px) {
   .project-card { flex: 0 0 min(240px, 95vw); max-width: 240px; padding: 12px; }
